@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server";
+
+package calculate;
+
+service Calculator {
+  rpc Add (IntFactorRequest) returns (ResultReply);
+  rpc Subtract (IntFactorRequest) returns (ResultReply);
+  rpc Multiply (IntFactorRequest) returns (ResultReply);
+  rpc Divide (IntFactorRequest) returns (ResultReply);
+}
+
+message IntFactorRequest {
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message ResultReply {
+  int32 f = 1;
+}
