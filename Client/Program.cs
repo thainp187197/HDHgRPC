@@ -1,7 +1,8 @@
 ﻿using Grpc.Net.Client;
-using Server;
+using gRPC.Server;
 using System;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Client
 {

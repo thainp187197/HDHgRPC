@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icon_file.png" />
+    <None Remove="icon_folder.png" />
+    <None Remove="icon_home.png" />
+    <None Remove="icon_opened_folder.png" />
+    <None Remove="Protos\file.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClientGUILibrary\ClientGUILibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\file.proto">
+      <GrpcServices>Client</GrpcServices>
+    </Protobuf>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icon_file.png" />
+    <Resource Include="icon_folder.png" />
+    <Resource Include="icon_home.png" />
+    <Resource Include="icon_opened_folder.png" />
+  </ItemGroup>
+
+</Project>

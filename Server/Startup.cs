@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Server
+namespace gRPC.Server
 {
     public class Startup
     {
@@ -33,6 +33,7 @@ namespace Server
             {
                 endpoints.MapGrpcService<GreeterService>();
                 endpoints.MapGrpcService<CalculatorService>();
+                endpoints.MapGrpcService<FileService>();
 
                 endpoints.MapGet("/", async context =>
                 {

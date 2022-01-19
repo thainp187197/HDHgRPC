@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC.Server";
+
+package file;
+
+service File {
+  rpc ExplorePath (PathRequest) returns (PathReply);
+}
+
+message PathRequest {
+  string path = 1;
+}
+
+message PathReply {
+  string path = 2;
+  repeated string files = 3;
+}

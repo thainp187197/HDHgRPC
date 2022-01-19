@@ -1,25 +1,21 @@
 syntax = "proto3";
 
-option csharp_namespace = "Server";
+option csharp_namespace = "gRPC.Server";
 
 package calculate;
 
-// The greeting service definition.
 service Calculator {
-  // Sends a greeting
   rpc Add (IntFactorRequest) returns (ResultReply);
   rpc Subtract (IntFactorRequest) returns (ResultReply);
   rpc Multiply (IntFactorRequest) returns (ResultReply);
   rpc Divide (IntFactorRequest) returns (ResultReply);
 }
 
-// The request message containing the user's name.
 message IntFactorRequest {
   int32 x = 1;
   int32 y = 2;
 }
 
-// The response message containing the greetings.
 message ResultReply {
   int32 f = 1;
 }
